@@ -26,7 +26,7 @@ pipeline {
                 success {
                     junit '**/target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
-                    sh 'Aws s3 cp target/bbapp.jar s3://mavenjenkinbucket/bba-app/'
+                    sh 'aws s3 cp target/bbapp.jar s3://mavenjenkinbucket/bba-app/'
                 }
             }
         }
