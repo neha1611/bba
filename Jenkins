@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
+                
                 git branch: 'main', url: 'https://github.com/neha1611/bba.git'
 
                 // Run Maven on a Unix agent.
